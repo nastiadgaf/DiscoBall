@@ -5,7 +5,6 @@ let timer = setInterval(function(){
     let height = `${getRandomArbitrary(1, maxHeight - 100)}px`;
     let width = `${getRandomArbitrary(1, maxWidth - 100)}px`;
     let borderColor = getRandomColor();
-   // let boxShadow = getRandomShadowColor();
     ball.animate({
         top: height,
         left: width,
@@ -14,7 +13,7 @@ let timer = setInterval(function(){
         borderBottomColor: `#${borderColor}`,
         borderRightColor: `#${borderColor}`,
         borderLeftColor: `#${borderColor}`,
-        boxShadowColor: `0px 0px 16px 24px rgba(${getRandomShadowColor()}, 0.84)`
+        boxShadow: `0px 0px 16px 14px rgba(${getRandomShadowColor()}, 0.54)`
     }, 1000)
 }, 1000);
 
@@ -29,6 +28,5 @@ function getRandomColor() {
 function getRandomShadowColor() {
     const getRandomRGB = () => Math.floor(Math.random() * 256);
     let shadowColor = `${getRandomRGB()}, ${getRandomRGB()}, ${getRandomRGB()}`;
-    console.log(shadowColor)
     return shadowColor;
 }
